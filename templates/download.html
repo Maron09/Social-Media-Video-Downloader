@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+</head>
+<body>
+    <h1>Download Page</h1>
+    <p>Click the link below to download the video:</p>
+
+    <a href="{{ download_url }}" download>Download Video</a>
+
+    <p>Back to <a href="{{ back_url }}" target="_blank">Back</a></p>
+
+    <p><a href="{{ url_for('index') }}">Go back to Homepage</a></p>
+</body>
+</html>

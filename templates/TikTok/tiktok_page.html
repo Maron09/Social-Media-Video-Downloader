@@ -1,0 +1,25 @@
+<!-- TikTok/tiktok_page.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Page</title>
+</head>
+<body>
+    <h1>Welcome to the TikTok Page</h1>
+    <p>This is the TikTok page where you can download TikTok videos.</p>
+
+    <form action="{{ url_for('download') }}" method="post">
+        <label for="video_link">Enter TikTok Video Link:</label>
+        <input type="text" id="video_link" name="video_link" required>
+        <button type="submit">Download</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <p><a href="{{ url_for('index') }}">Go back to Homepage</a></p>
+</body>
+</html>

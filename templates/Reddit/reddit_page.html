@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Page</title>
+</head>
+<body>
+    <h1>Welcome to the Reddit Page</h1>
+    <p>This is the Reddit page where you can download Reddit videos.</p>
+
+    <form action="{{ url_for('download') }}" method="post">
+        <label for="video_link">Reddit Video Link:</label>
+        <input type="text" id="video_link" name="video_link" required>
+        <button type="submit">Download</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <p><a href="{{ url_for('index') }}">Go back to Homepage</a></p>
+</body>
+</html>
