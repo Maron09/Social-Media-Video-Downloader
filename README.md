@@ -6,10 +6,10 @@ Hompage
 Tiktok
 ![Screenshot 2024-05-10 125937](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/245da9cc-5e16-40dd-96e6-be5d4f12753e)
 
-Instagram
+Reddit
 ![Screenshot 2024-05-10 125949](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/04facb61-ae76-42c2-ac43-5f52a5874361)
 
-Reddit
+Instagram
 ![Screenshot 2024-05-10 130001](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/600eb633-0596-4ae3-b495-f0851470448d)
 
 Youtube
