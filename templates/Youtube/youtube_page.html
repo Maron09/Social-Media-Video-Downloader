@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Youtube Page</title>
 </head>
-<body>
-    <h1>Welcome to the Youtube Page</h1>
-    <p>This is the Youtube page where you can download Youtube Files.</p>
+<body class="yt">
+    <div class="container-fluid mena">
+        <h1>Youtube Page <i class="fab fa-youtube" style="font-size:36px; background: #CD201F; color: #ffffff; border-radius: 20%; padding: 10px; margin-top: 10px;"></i></h1>
+        <p>This is the Youtube page where you can download Youtube Files.</p>
+        
+        <form action="{{ url_for('download') }}" method="post" class="form-floating text-center">
+            <div class="mb-3">
+                <label for="video_link" class="form-label"><b>Enter Youtube Link:</b></label>
+                <input type="text" id="video_link" class="form-control" name="video_link" required>
+            </div>
+            
+            <button type="submit" class="btn btn-info">Download</button>
+        </form>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <br>
+        <br>
+        <a href="{{ url_for('index') }}"><button class="btn btn-dark gap-3">Go back to Homepage</button></a>
+    </div>
     
-    <form action="{{ url_for('download') }}" method="post">
-        <label for="video_link">Enter Youtube Link:</label>
-        <input type="text" id="video_link" name="video_link" required>
-        <button type="submit">Download</button>
-    </form>
-
-    {% if message %}
-        <p>{{ message }}</p>
-    {% endif %}
-
-    <p><a href="{{ url_for('index') }}">Go back to Homepage</a></p>
 </body>
 </html>

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  *:focus,
+  *:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+html,
+body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #51e2f5, #d4d4dc, #393f4d, #1d1e22);
+}
+
+.mena{
+    color: #FFFF;
+}
