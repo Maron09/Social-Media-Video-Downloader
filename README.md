@@ -1,24 +1,105 @@
-"# Social-Media-Video-Downloader" 
+# Social Media Video Downloader
 
-Hompage
-![Screenshot 2024-05-10 120409](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/fbc927f5-2d75-4d63-983e-cfec35808208)
+This Flask web application allows users to download videos from TikTok, Reddit, Instagram, and YouTube. Users can enter the URL of the video they wish to download, and the application will handle the download and provide a link to the saved video.
 
-Tiktok
-![Screenshot 2024-05-10 125937](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/245da9cc-5e16-40dd-96e6-be5d4f12753e)
+## Features
 
-Reddit
-![Screenshot 2024-05-10 125949](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/04facb61-ae76-42c2-ac43-5f52a5874361)
+- **TikTok Video Download**: Download videos from TikTok and save them in a designated folder.
+- **Reddit Video Download**: Download videos from Reddit and save them in a designated folder.
+- **Instagram Media Download**: Download posts (videos and images) from Instagram and save them in a designated folder.
+- **YouTube Video Download**: Download videos from YouTube and save them in a designated folder.
 
-Instagram
-![Screenshot 2024-05-10 130001](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/600eb633-0596-4ae3-b495-f0851470448d)
+## Prerequisites
 
-Youtube
-![Screenshot 2024-05-10 130115](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/9e35fb99-4128-4886-ac69-6ccd7f7329db)
+- Python 3.6 or higher
+- Flask
+- Video download libraries:
+  - `TikTokDownloader`
+  - `RedditDownloader`
+  - `Instagram` (with necessary Instagram download functionality)
+  - `YouTubeDownloader` (with necessary YouTube download functionality)
 
-Download Page
-![Screenshot 2024-05-10 130931](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/de213596-90b2-410c-83d1-d69009af85d3)
+## Installation
 
-server
-![Screenshot 2024-05-10 131018](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/44b40b95-4797-44ba-8737-602b9e593cda)
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/maron09/social-media-video-downloader.git
+   cd social-media-video-downloader
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. **Set up folders:**
+
+   Ensure the following folders exist in the root directory:
+   - `reddit_videos`
+   - `tiktok_videos`
+   - `instagram_files`
+   - `youtube_files`
+
+   You can create them manually or through the command line:
+
+   ```sh
+   mkdir reddit_videos tiktok_videos instagram_files youtube_files
+   ```
+
+## Running the Application
+
+To start the Flask application, run:
+
+```sh
+python app.py
+```
+
+This will start the server on `http://localhost:5000`.
+
+## Usage
+
+1. **Homepage**: Navigate to `http://localhost:5000/` to see the homepage.
+2. **Download Page**: Select the platform (TikTok, Reddit, Instagram, or YouTube) from the navigation menu.
+3. **Enter URL**: On the selected platform's page, enter the video URL and click the download button.
+4. **Download Link**: If the download is successful, a link to the downloaded video will be provided.
+
+## Folder Structure
+
+- **app.py**: The main Flask application file.
+- **templates/**: Contains HTML templates for the homepage and other pages.
+  - **homepage.html**: The main homepage template.
+  - **TikTok/tiktok_page.html**: Template for the TikTok download page.
+  - **Reddit/reddit_page.html**: Template for the Reddit download page.
+  - **Instagram/instagram_page.html**: Template for the Instagram download page.
+  - **Youtube/youtube_page.html**: Template for the YouTube download page.
+  - **download.html**: Template for displaying the download link.
+- **reddit_videos/**: Folder where Reddit videos are saved.
+- **tiktok_videos/**: Folder where TikTok videos are saved.
+- **instagram_files/**: Folder where Instagram media files are saved.
+- **youtube_files/**: Folder where YouTube videos are saved.
+
+## Error Handling
+
+If the video URL is invalid or if the download fails, an error message will be displayed on the homepage.
+
+## Logging
+
+Errors during the download process are logged for troubleshooting. Check the Flask application logs for more details if something goes wrong.
 
 
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any features or bug fixes.
+
+## Contact
+
+For any questions or support, please open an issue in the repository or contact the project maintainer.
+
+
+- **Email**: chimarokeonyebi@gmail.com
+
+---
+
+This README provides an overview of the project, setup instructions, and usage details to help you get started with the social media video downloader web application.
