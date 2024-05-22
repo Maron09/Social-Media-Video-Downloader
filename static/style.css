@@ -28,7 +28,7 @@
     width: 100%;
     font-family: "Poppins", sans-serif;
     place-items: center;
-    background: linear-gradient(135deg, #a0d2eb, #e5eaf5, #d0bdf4, #8458B3, #a28089);
+    background: var(--main-color);
   }
 
   .wrapper {
@@ -39,6 +39,7 @@
 
   h1{
     color: #FFFFFF;
+    text-transform: capitalize;
   }
 
   small{
