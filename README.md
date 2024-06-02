@@ -1,3 +1,7 @@
+
+![034699e0-8939-4c6a-bf4e-a5854a09181a](https://github.com/Maron09/Social-Media-Video-Downloader/assets/107930543/03b38bb9-a93d-42a4-b041-b9b346007414)
+
+
 # Social Media Video Downloader
 
 This Flask web application allows users to download videos from TikTok, Reddit, Instagram, and YouTube. Users can enter the URL of the video they wish to download, and the application will handle the download and provide a link to the saved video.
